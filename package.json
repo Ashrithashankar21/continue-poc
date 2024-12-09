@@ -1,6 +1,6 @@
 {
-  "name": "worker-thread-migration",
-  "displayName": "worker-thread-migration",
+  "name": "child-process-migration",
+  "displayName": "child-process-migration",
   "description": "",
   "version": "0.0.1",
   "engines": {
