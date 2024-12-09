@@ -27,8 +27,7 @@ const webExtensionConfig = {
       // see https://webpack.js.org/configuration/resolve/#resolvefallback
       // for the list of Node.js core module polyfills.
       assert: require.resolve("assert"),
-      os: require.resolve("os-browserify/browser"),
-      path: require.resolve("path-browserify"),
+      util: require.resolve("util/"),
     },
   },
   module: {

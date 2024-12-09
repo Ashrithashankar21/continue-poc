@@ -1,30 +1,27 @@
 import * as vscode from 'vscode';
-import * as os from 'os';
-import * as path from 'path';
+import { promisify } from 'util';
+
+// Dummy callback-based function
+function dummyCallbackFunction(value: string, callback: (err: Error | null, result: string) => void) {
+    if (!value) {
+        return callback(new Error('Invalid value'), '');
+    }
+    callback(null, `Processed: ${value}`);
+}
+
+// Convert the callback-based function to a promise-based one using util.promisify
+const dummyPromiseFunction = promisify(dummyCallbackFunction);
 
 export function activate(context: vscode.ExtensionContext) {
 	console.log('Congratulations, your extension "helloworld" is now active!');
 
 	const disposable = vscode.commands.registerCommand('helloworld.helloWorld', async () => {
-		const homeDir = os.homedir();
-		const targetDir = path.join(homeDir, 'poc-fs');
-		try {
-			await vscode.workspace.fs.createDirectory(vscode.Uri.file(path.join(targetDir, 'data')));
-			await vscode.workspace.fs.writeFile(
-				vscode.Uri.file(path.join(targetDir, 'data.json')),
-				new TextEncoder().encode(JSON.stringify(
-				{
-					name: "binary",
-					version: "1.0.0",
-					author: "Continue Dev, Inc",
-					license: "Apache-2.0",
-				}),
-				),
-		  	);
-			vscode.window.showInformationMessage('File created successfully.');
-		} catch (error) {
-			vscode.window.showErrorMessage(`Error: ${(error as Error).message}`);
-		}
+        try {
+            const result = await dummyPromiseFunction('util.promisify is cool');
+            vscode.window.showInformationMessage(result);
+        } catch (error) {
+            vscode.window.showErrorMessage((error as Error).message);
+        }
 	});
 
 	context.subscriptions.push(disposable);
