@@ -1,6 +1,6 @@
 {
-  "name": "path-migration",
-  "displayName": "path-migration",
+  "name": "worker-thread-migration",
+  "displayName": "worker-thread-migration",
   "description": "",
   "version": "0.0.1",
   "engines": {

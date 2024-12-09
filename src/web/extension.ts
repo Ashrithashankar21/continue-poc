@@ -1,13 +1,19 @@
 import * as vscode from 'vscode';
-import * as path from 'path';
 
 export function activate(context: vscode.ExtensionContext) {
 	console.log('Congratulations, your extension "helloworld" is now active!');
+	console.log(context.extensionUri,'1');
+	const disposable = vscode.commands.registerCommand('helloworld.helloWorld', () => {
 
-	const disposable = vscode.commands.registerCommand('helloworld.helloWorld', async () => {
-        const rootPath = vscode.workspace.workspaceFolders ? vscode.workspace.workspaceFolders[0].uri.fsPath : '';
-        const exampleFilePath = path.join(rootPath, 'example.txt');
-        vscode.window.showInformationMessage(`Example file path: ${exampleFilePath}`);
+        // Use the Web Worker API to create a new worker
+        const worker = new Worker('./worker.js');		
+		worker.onmessage = (event) => {
+			console.log("Message from worker:", event.data);
+		};
+
+
+		worker.postMessage("Hello from main thread");
+		vscode.window.showInformationMessage('Hello Worker thread!!');
 	});
 
 	context.subscriptions.push(disposable);
