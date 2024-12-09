@@ -1,6 +1,6 @@
 {
-  "name": "fs-migration",
-  "displayName": "fs-migration",
+  "name": "os-migration",
+  "displayName": "os-migration",
   "description": "",
   "version": "0.0.1",
   "engines": {
@@ -55,7 +55,6 @@
   "dependencies": {
     "@vscode/test-web": "^0.0.64",
     "os-browserify": "^0.3.0",
-    "path-browserify": "^1.0.1",
     "process": "^0.11.10"
   }
 }
