@@ -1,6 +1,6 @@
 # FS Extension
 
-It is a simple demonstration of creating a basic web extension using os module.
+It is a simple demonstration of creating a basic web extension using path module.
 
 ## Conclusion
 
