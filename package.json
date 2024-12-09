@@ -1,13 +1,16 @@
 {
-  "name": "migration",
-  "displayName": "migration",
+  "name": "fs-migration",
+  "displayName": "fs-migration",
   "description": "",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.95.0"
   },
   "publisher": "solitontech-hello-world",
-  "repository": "hello-world",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ashrithashankar21/continue-poc.git"
+  },
   "categories": [
     "Other"
   ],
@@ -50,6 +53,9 @@
     "worker-loader": "^3.0.8"
   },
   "dependencies": {
-    "@vscode/test-web": "^0.0.64"
+    "@vscode/test-web": "^0.0.64",
+    "os-browserify": "^0.3.0",
+    "path-browserify": "^1.0.1",
+    "process": "^0.11.10"
   }
 }
