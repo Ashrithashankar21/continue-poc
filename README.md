@@ -1,11 +1,8 @@
-# Worker thread Extension
+# Child process Extension
 
-It is a simple demonstration of creating a basic web extension using worker
-thread module.
+It is a simple demonstration of creating a basic web extension using child
+process module.
 
 ## Conclusion
 
-Couldn't find a solution. Need to look into the code to get an
-understanding of how they are using this in continue code.
-
-![Error](images/error.png)
+We can migrate it with using any of the custom functions.
