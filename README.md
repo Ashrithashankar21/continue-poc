@@ -1,4 +1,4 @@
-# FS Extension
+# PATH Extension
 
 It is a simple demonstration of creating a basic web extension using path module.
 
