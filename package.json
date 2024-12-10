@@ -1,6 +1,6 @@
 {
-  "name": "os-migration",
-  "displayName": "os-migration",
+  "name": "perf-migration",
+  "displayName": "perf-migration",
   "description": "",
   "version": "0.0.1",
   "engines": {
