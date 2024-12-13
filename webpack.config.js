@@ -28,6 +28,7 @@ const webExtensionConfig = {
       // for the list of Node.js core module polyfills.
       assert: require.resolve("assert"),
       os: require.resolve("os-browserify/browser"),
+      process: require.resolve("process/browser"),
     },
   },
   module: {
@@ -50,6 +51,7 @@ const webExtensionConfig = {
   ],
   externals: {
     vscode: "commonjs vscode", // ignored because it doesn't exist
+    "node:process": "commonjs process",
   },
   performance: {
     hints: false,

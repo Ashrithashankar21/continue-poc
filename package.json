@@ -1,6 +1,6 @@
 {
-  "name": "os-migration",
-  "displayName": "os-migration",
+  "name": "process-migration",
+  "displayName": "process-migration",
   "description": "",
   "version": "0.0.1",
   "engines": {
@@ -54,6 +54,7 @@
   },
   "dependencies": {
     "@vscode/test-web": "^0.0.64",
+    "node-fetch": "^3.3.2",
     "os-browserify": "^0.3.0",
     "process": "^0.11.10"
   }
